@@ -18,6 +18,41 @@ body {
   z-index: 999;
 }
 
+.map {
+  height: 800px;
+}
+
+.keybinds {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  bottom: 0;
+  margin: 2.5rem;
+}
+
+.keybinds .binding {
+  position: relative;
+  margin: 0 0.5rem;
+}
+
+.keybinds .binding * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 2.5rem;
+  margin: 0.75rem 0.5rem 0;
+  border-radius: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.keybinds .binding .key {
+  background: none;
+  transform: scale(1.25);
+}
+
 .container {
   position: relative;
   display: flex;
@@ -152,7 +187,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: 1rem;
+  padding: 2.5rem;
   color: white;
   z-index: 998;
 }

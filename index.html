@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Map</title>
+    <title>TimeMachine</title>
     <script
       type="module"
       src="https://unpkg.com/elm-pep@1.0.6/dist/elm-pep.js"
@@ -19,18 +19,6 @@
   </head>
   <body>
     <div class="modal"></div>
-    <div id="map" class="map"></div>
-    <div class="slidercontainer">
-      <p class="slider-text">Tarih: 1995</p>
-      <input class="slider" type="range" min="1850" max="1995" value="1995" />
-    </div>
     <script type="module" src="main.js"></script>
-    <script defer>
-      const map = document.getElementById("map"),
-        map_resize = () =>
-          (map.style = `width: ${window.innerWidth}px; height: ${window.innerHeight}px;`);
-      map_resize();
-      window.addEventListener("resize", map_resize);
-    </script>
   </body>
 </html>
