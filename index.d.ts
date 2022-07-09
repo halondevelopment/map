@@ -15,13 +15,14 @@ export class Modal {
   initialize(ids: number[], urls: string[]): this;
 }
 
-interface Entry {
+export interface Entry {
   coordinates: number[];
   id: number;
   ids: number[] | null;
   get interval(): string;
   name: string;
   photographer: string | null;
+  similars: Entry[] | null;
   source: string;
   story: string;
   get url(): string;

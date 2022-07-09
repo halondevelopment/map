@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", async function () {
     api: "https://cbsproxy.ibb.gov.tr/?ZamanMakinesiGetir&",
     map: {
       center: transform(
-        [29.00152421875, 41.013806515957],
+        //[29.00152421875, 41.013806515957],
+        [28.96487363, 41.00934947],
         "EPSG:4326",
         "EPSG:3857"
       ),
@@ -15,7 +16,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       zoom: {
         maxZoom: 18,
         minZoom: 9,
-        zoom: 12,
+        zoom: 16,
       },
     },
   }).initialize();
