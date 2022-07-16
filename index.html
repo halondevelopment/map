@@ -15,9 +15,32 @@
       type="module"
       src="https://cdnjs.cloudflare.com/ajax/libs/core-js/3.18.3/minified.js"
     ></script>
-    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <script type="module" src="main.js"></script>
+    <script type="module">
+      import { transform } from "ol/proj";
+      import TimeMachine from "./lib/machine";
+
+      document.addEventListener(
+        "DOMContentLoaded",
+        async () =>
+          await new TimeMachine({
+            api: "https://cbsproxy.ibb.gov.tr/?ZamanMakinesiGetir&",
+            map: {
+              center: transform(
+                [29.00152421875, 41.013806515957],
+                "EPSG:4326",
+                "EPSG:3857"
+              ),
+              extent: [3110000, 4975000, 3340000, 5100000],
+              zoom: {
+                maxZoom: 20,
+                minZoom: 10,
+                zoom: 12,
+              },
+            },
+          }).initialize()
+      );
+    </script>
   </body>
 </html>
